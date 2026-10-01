@@ -102,6 +102,28 @@
     .sticky-cta{display:flex;}
     footer{padding-bottom:100px;}
   }
+  .hero .hero__browse{margin:20px 0 0; font-size:15px;}
+  .hero__browse a,.stock-enquiry a{font-weight:700;}
+  .stock-enquiry{text-align:center; margin-top:28px;}
+  .services-strip .section__head{margin-bottom:28px;}
+  .services-strip h2,.services-strip a{color:#fff;}
+  .services-strip h3{font-size:21px; margin-bottom:8px;}
+  .services-strip p{color:#fff;}
+  .services-strip .grid{gap:28px;}
+  .owner figcaption{font-size:13px; color:var(--muted); margin-top:10px;}
+  .owner h2{font-size:24px; margin-bottom:14px;}
+  .visit-actions{display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:20px;}
+  .visit-note{margin-top:14px;}
+  .footer-links{display:flex; justify-content:center; flex-wrap:wrap; gap:12px 24px; margin-top:12px;}
+  @media(max-width:820px){
+    .hero{padding:32px 0;}
+    .hero__collage{order:0;}
+    .hero__grid{gap:32px;}
+    .hero__actions{gap:12px;}
+    .hero__actions .btn{width:100%; text-align:center;}
+    .sticky-cta a{padding:12px 8px; font-size:13px;}
+    .sticky-cta a:first-child{flex:1.6;}
+  }
 </style>
 </head>
 <body>
@@ -136,15 +158,16 @@
   <div class="wrap hero__grid">
     <div>
       <span class="hero__tag">🔧 Hardware &amp; Home Essentials · Northfield</span>
-      <h1>Everything you need,<br><span>right on your doorstep.</span></h1>
-      <p>Bright Products is Northfield Shopping Centre's go-to shop for hardware, homeware and everyday essentials — no trek to a big-box store required.</p>
+      <h1>Can't find it?<br><span>Ask us.</span></h1>
+      <p>One missing fixing holding up the job? Call Bright Products in Northfield Shopping Centre and tell us what you're after. Quicker than a trip out to a large DIY store.</p>
       <div class="hero__actions">
-        <a href="#shop" class="btn btn--accent">Browse Our Range</a>
-        <a href="tel:+447547741618" class="btn btn--outline">📞 07547 741618</a>
+        <a href="tel:+447547741618" class="btn btn--accent">Call 07547 741618</a>
+        <a href="#contact" class="btn btn--outline">Find us in the Shopping Centre</a>
       </div>
+      <p class="hero__browse"><a href="#shop">What we stock →</a></p>
     </div>
     <div class="hero__collage">
-      <img src="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hardware tools displayed in store" loading="lazy" />
+      <img src="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A display of hardware tools" loading="lazy" />
       <img src="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wrenches on a surface" loading="lazy" />
     </div>
   </div>
@@ -154,34 +177,46 @@
   <div class="wrap">
     <div class="section__head reveal">
       <h2>What we stock</h2>
-      <p>A hand-picked range covering the essentials.</p>
+      <p>A hand-picked range covering the essentials, in the heart of Northfield Shopping Centre.</p>
     </div>
+    <!-- PLACEHOLDER: confirm product categories and stock with owner -->
     <div class="grid">
       <div class="card reveal"><div class="icon">🔨</div><h3>Tools &amp; Hardware</h3><p>The exact screw, washer or fixing you need — sold as a single item, not just buried in a pack of 50.</p></div>
       <div class="card reveal"><div class="icon">🏠</div><h3>Homeware</h3><p>The kitchen-drawer basics you always seem to run out of at 6pm on a Sunday.</p></div>
       <div class="card reveal"><div class="icon">🧴</div><h3>Cleaning Supplies</h3><p>Trade-strength cleaning products sitting right alongside the usual supermarket brands.</p></div>
       <div class="card reveal"><div class="icon">🔌</div><h3>Electricals</h3><p>Bulbs, batteries and plug fittings sorted by type on the wall — no digging through mixed bins.</p></div>
-      <div class="card reveal"><div class="icon">🔑</div><h3>Key Cutting</h3><p>Cut at the counter while you wait — no dropping off and coming back later in the day.</p></div>
-      <div class="card reveal"><div class="icon">🎨</div><h3>Paint &amp; Garden</h3><p>Bring in a sample and we'll match the paint, then sort you the garden tools for the job after.</p></div>
     </div>
+    <!-- /PLACEHOLDER -->
+    <p class="stock-enquiry">Can't see what you need? <a href="tel:+447547741618">Call 07547 741618 and ask.</a></p>
   </div>
 </section>
 
-<section class="strip">
-  <div class="wrap grid">
-    <div class="reveal"><h3>8+</h3><p>Years in Northfield Centre</p></div>
-    <div class="reveal"><h3>Handy</h3><p>Everyday Essentials</p></div>
-    <div class="reveal"><h3>Friendly</h3><p>In-Store Advice</p></div>
+<section class="strip services-strip">
+  <div class="wrap">
+    <div class="section__head reveal"><h2>Handy services at the counter</h2><p>The extras a big retail park can't be bothered with.</p></div>
+    <div class="grid">
+      <!-- PLACEHOLDER: key cutting availability and turnaround; confirm with owner -->
+      <div class="reveal"><h3>Key cutting</h3><p>Cut at the counter while you wait — no dropping off and coming back later in the day.</p></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: paint matching and mixing availability; confirm with owner -->
+      <div class="reveal"><h3>Paint matching &amp; mixing</h3><p>Bring in a sample and we'll match the paint, then sort you the garden tools for the job after.</p></div>
+      <!-- /PLACEHOLDER -->
+      <div class="reveal"><h3>Something else?</h3><p>Describe the job or the part you're trying to find. <a href="tel:+447547741618">Call 07547 741618</a> and we'll point you right.</p></div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="owner reveal">
-      <img src="https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Shop owner" loading="lazy" />
+      <img src="https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Smiling person in a shop" loading="lazy" />
       <div>
+        <h2>Start with the job, not the jargon</h2>
+        <p>Not sure what the part is called? Take a photo and note any measurements or markings before you call Bright Products or visit us in Northfield Shopping Centre.</p>
+        <!-- PLACEHOLDER: team quote and attribution; confirm wording with owner -->
         <blockquote>"If we don't have it, we'll usually tell you exactly where in Northfield you can find it. That's the difference between a proper local shop and a warehouse."</blockquote>
         <div class="who">— The team at Bright Products</div>
+        <!-- /PLACEHOLDER -->
       </div>
     </div>
   </div>
@@ -190,17 +225,22 @@
 <section id="reviews" class="reviews">
   <div class="wrap">
     <div class="section__head reveal">
-      <span class="rating-badge">⭐ 4.7 · Google Reviews</span>
-      <h2>What shoppers say</h2>
+      <h2>What locals say</h2>
       <p>Feedback from regular customers.</p>
     </div>
     <div class="review-grid">
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Saved me a trip into town — they had exactly the fitting I needed in stock."</p><div class="who"><span class="avatar">A</span> Local Customer</div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Staff actually know what they're talking about, which you don't get everywhere."</p><div class="who"><span class="avatar">N</span> Local Customer</div></div>
-      <div class="review reveal"><div class="stars">★★★★☆</div><p>"Handy little shop, good range for the size of it."</p><div class="who"><span class="avatar">B</span> Local Customer</div></div>
+      <!-- PLACEHOLDER: replace with real Google review -->
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Saved me a trip into town — they had exactly the fitting I needed in stock."</p><div class="who"><span class="avatar">A</span> Aisha, local regular</div></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: replace with real Google review -->
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Staff actually know what they're talking about, which you don't get everywhere."</p><div class="who"><span class="avatar">N</span> Neil, local regular</div></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: replace with real Google review -->
+      <div class="review reveal"><div class="stars">★★★★☆</div><p>"Handy little shop, good range for the size of it."</p><div class="who"><span class="avatar">B</span> Beth, local regular</div></div>
+      <!-- /PLACEHOLDER -->
     </div>
     <div style="text-align:center; margin-top:36px;">
-      <a class="btn btn--outline" href="https://www.google.com/search?q=Bright+Products+Northfield+Shopping+Centre+reviews" target="_blank" rel="noopener">See all reviews on Google →</a>
+      <a class="btn btn--outline" href="tel:+447547741618">Ask about what you need</a>
     </div>
   </div>
 </section>
@@ -212,36 +252,52 @@
       <p>Quick answers before your visit.</p>
     </div>
     <div class="faq reveal">
+      <!-- PLACEHOLDER: confirm key cutting with owner -->
       <details><summary>Do you cut keys while I wait?</summary><p>Yes, key cutting is a while-you-wait service, no appointment needed.</p></details>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: confirm paint mixing with owner -->
       <details><summary>Do you sell paint in specific colours?</summary><p>Yes, we can mix paint to a wide range of colours in-store.</p></details>
-      <details><summary>Is there parking at the shopping centre?</summary><p>Yes, Northfield Shopping Centre has customer parking on site.</p></details>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: confirm centre parking with owner -->
+      <details><summary>Is there parking at the shopping centre?</summary><p>Yes, Northfield Shopping Centre has customer parking on site, and the shop is easy to reach on foot from the centre entrances.</p></details>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: confirm payment methods with owner -->
       <details><summary>Do you take card payments?</summary><p>Yes, card, contactless and cash are all accepted.</p></details>
+      <!-- /PLACEHOLDER -->
+      <details><summary>Can I check stock before coming in?</summary><p>Call <a href="tel:+447547741618">07547 741618</a> and tell us what you're looking for. A size, product code or a description of the job is all we need.</p></details>
+      <details><summary>What if I don't know what the part is called?</summary><p>Take a clear photo and note any measurements or markings, then call or bring it in. We'll work out the rest.</p></details>
+      <details><summary>Where can I find you?</summary><p>Bright Products is in Northfield Shopping Centre, Birmingham. <a href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham">Get directions</a>, or call and we'll talk you to the door.</p></details>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap section__head reveal">
-    <h2>Visit Us</h2>
-    <p>Northfield Shopping Centre, Birmingham.</p>
+    <h2>Find us in the Shopping Centre</h2>
+    <p>Bright Products · Northfield Shopping Centre, Birmingham.</p>
+    <div class="visit-actions">
+      <a class="btn btn--accent" href="tel:+447547741618">Call 07547 741618</a>
+      <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham">Get directions</a>
+    </div>
   </div>
   <div class="wrap map-contact reveal">
     <iframe src="https://maps.google.com/maps?q=Northfield+Shopping+Centre,+Birmingham&z=15&output=embed" loading="lazy" title="Map to Bright Products"></iframe>
     <div class="grid" style="grid-template-columns:1fr;">
-      <div class="card"><h3>🕒 Opening Hours</h3><p>Mon–Sat: 9am – 5:30pm<br>Sun: 10am – 4pm</p></div>
-      <div class="card"><h3>📍 Location</h3><p>Northfield Shopping Centre<br>Birmingham</p></div>
+      <div class="card"><h3>🕒 Opening Hours</h3><!-- PLACEHOLDER: real opening hours needed --><p>Mon–Sat: 9am – 5:30pm<br>Sun: 10am – 4pm</p><!-- /PLACEHOLDER --></div>
+      <div class="card"><h3>📍 Location</h3><p>Northfield Shopping Centre<br>Birmingham</p><!-- PLACEHOLDER: unit number needed --><p class="visit-note">Find us on the ground-floor walkway, just inside the main entrance.</p><!-- /PLACEHOLDER --></div>
+      <div class="card"><h3>Parking &amp; access</h3><!-- PLACEHOLDER: centre parking, accessible entrances and step-free shop access; confirm with owner --><p>Customer parking is on site at the centre, and the shop is reachable step-free from the main entrance.</p><!-- /PLACEHOLDER --></div>
     </div>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2026 Bright Products, Northfield Shopping Centre, Birmingham.</p>
-  <p style="margin-top:6px;">Site by <a href="#">your name here</a></p>
+  <div class="footer-links"><a href="tel:+447547741618">Call 07547 741618</a><a href="#contact">Opening hours</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham">Get directions</a></div>
 </footer>
 
 <div class="sticky-cta">
-  <a href="tel:+447547741618" class="btn btn--accent">📞 Call Now</a>
-  <a href="#contact" class="btn btn--outline" style="border-color:#fff; color:#fff;">📍 Visit</a>
+  <a href="tel:+447547741618" class="btn btn--accent">Call 07547 741618</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham" class="btn btn--outline" style="border-color:#fff; color:#fff;">Directions</a>
 </div>
 
 <script>
