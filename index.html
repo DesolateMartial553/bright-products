@@ -41,6 +41,7 @@
   }
 }
 </script>
+<link rel="preload" as="image" href="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=660&h=660" imagesrcset="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=330&h=330 330w, https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=660&h=660 660w, https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=900&h=900 900w" imagesizes="(max-width:820px) 62vw, 330px" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -203,8 +204,8 @@
       <p class="hero__browse"><a href="#shop">What we stock →</a></p>
     </div>
     <div class="hero__collage">
-      <img src="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A display of hardware tools" loading="lazy" />
-      <img src="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wrenches on a surface" loading="lazy" />
+      <img src="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=660&h=660" srcset="https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=330&h=330 330w, https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=660&h=660 660w, https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=900&h=900 900w" sizes="(max-width:820px) 62vw, 330px" width="660" height="660" alt="A display of hardware tools" fetchpriority="high" decoding="async" />
+      <img src="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=540&h=450" srcset="https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=270&h=225 270w, https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=540&h=450 540w, https://images.pexels.com/photos/5414384/pexels-photo-5414384.jpeg?auto=compress&cs=tinysrgb&w=780&h=650 780w" sizes="(max-width:820px) 52vw, 280px" width="540" height="450" alt="Wrenches on a surface" decoding="async" />
     </div>
   </div>
 </section>
@@ -245,7 +246,7 @@
 <section>
   <div class="wrap">
     <div class="owner reveal">
-      <img src="https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Smiling person in a shop" loading="lazy" />
+      <img src="https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=440&h=440" srcset="https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=220&h=220 220w, https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=440&h=440 440w, https://images.pexels.com/photos/8422729/pexels-photo-8422729.jpeg?auto=compress&cs=tinysrgb&w=640&h=640 640w" sizes="(max-width:820px) calc(100vw - 100px), 220px" width="440" height="440" alt="Smiling person in a shop" loading="lazy" decoding="async" />
       <div>
         <h2>Start with the job, not the jargon</h2>
         <p>Not sure what the part is called? Take a photo and note any measurements or markings before you call Bright Products or visit us in Northfield Shopping Centre.</p>
@@ -317,7 +318,14 @@
     </div>
   </div>
   <div class="wrap map-contact reveal">
-    <iframe src="https://maps.google.com/maps?q=Northfield+Shopping+Centre,+Birmingham&z=15&output=embed" loading="lazy" title="Map to Bright Products"></iframe>
+    <div class="map-facade" id="mapFacade" style="min-height:260px">
+      <div class="map-facade__panel" id="mapPanel">
+        <strong>Bright Products</strong>
+        <span>Northfield Shopping Centre, Birmingham</span>
+        <button type="button" class="btn btn--accent" id="mapShow">Show map</button>
+      </div>
+      <a class="map-facade__dir" href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham">Get directions</a>
+    </div>
     <div class="grid" style="grid-template-columns:1fr;">
       <div class="card"><h3>🕒 Opening Hours</h3><!-- PLACEHOLDER: real opening hours needed --><p>Mon–Sat: 9am – 5:30pm<br>Sun: 10am – 4pm</p><!-- /PLACEHOLDER --></div>
       <div class="card"><h3>📍 Location</h3><p>Northfield Shopping Centre<br>Birmingham</p><!-- PLACEHOLDER: unit number needed --><p class="visit-note">Find us on the ground-floor walkway, just inside the main entrance.</p><!-- /PLACEHOLDER --></div>
@@ -366,6 +374,30 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<style>
+  .map-facade{display:flex; flex-direction:column; width:100%; height:100%; min-height:260px; border-radius:16px; overflow:hidden; border:1px solid var(--line); background:linear-gradient(135deg,#e6f1ff,#f5faff);}
+  .map-facade__panel{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:24px; text-align:center; color:var(--ink);}
+  .map-facade__panel span{color:var(--muted); font-size:15px;}
+  .map-facade__panel .btn:focus-visible,.map-facade__dir:focus-visible{outline:3px solid var(--ink); outline-offset:2px;}
+  .map-facade__dir{display:block; text-align:center; padding:12px; font-weight:700; font-size:15px; background:var(--card); border-top:1px solid var(--line); color:var(--accent); text-decoration:none;}
+  .map-facade iframe{flex:1; width:100%; min-height:200px; border:0; border-radius:0;}
+</style>
+<script>
+  (function(){
+    var btn = document.getElementById('mapShow');
+    var box = document.getElementById('mapFacade');
+    var panel = document.getElementById('mapPanel');
+    if(!btn || !box || !panel) return;
+    btn.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = 'https://maps.google.com/maps?q=Northfield+Shopping+Centre,+Birmingham&z=15&output=embed';
+      f.title = 'Map to Bright Products';
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      box.replaceChild(f, panel);
+    });
+  })();
 </script>
 
 </body>
