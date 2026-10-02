@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw=' 'sha256-TVwwfSEKoCG1ABPyi+zyhI2Ri1vS+wu+FDfzhmILdHs=' 'sha256-mV74RySnBf4Q8KW9CMSzxayELqpWBHkrWLp2EstBfAk='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw=' 'sha256-TVwwfSEKoCG1ABPyi+zyhI2Ri1vS+wu+FDfzhmILdHs=' 'sha256-mV74RySnBf4Q8KW9CMSzxayELqpWBHkrWLp2EstBfAk='; style-src 'self' 'sha256-s0qCuVZEwJmxZs97qWXubGKKh4EMdk96eEZ8hekmdTM=' 'sha256-I7JiuTFQSKbRuUpCX3fn9hvJI02m6zZ88X+8QiYgZdM='; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
+<script>if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.hidden = true; } }</script>
 <title>Bright Products | Hardware Shop, Northfield, Birmingham</title>
 <meta name="description" content="Bright Products is a hardware and home essentials shop in Northfield Shopping Centre, Northfield, Birmingham. Call 07547 741618 to ask for a part." />
 <link rel="canonical" href="https://desolatemartial553.github.io/bright-products/" />
@@ -176,6 +177,10 @@
     .sticky-cta a:first-child{flex:1.6;}
   }
   footer a[href="privacy.html"]{text-decoration:underline; text-underline-offset:3px;}
+  /* Former inline style attributes (moved here for a stricter CSP) */
+  .u-s1{min-height:260px !important;}
+  .u-s2{grid-template-columns:1fr !important;}
+  .u-s3{text-align:center !important; margin-top:36px !important;}
 </style>
 </head>
 <body>
@@ -294,7 +299,7 @@
       <div class="review reveal"><div class="stars" aria-hidden="true">★★★★☆</div><span class="sr-only">4 out of 5</span><p>"Handy little shop, good range for the size of it."</p><div class="who"><span class="avatar">B</span> Beth, local regular</div></div>
       <!-- /PLACEHOLDER -->
     </div>
-    <div style="text-align:center; margin-top:36px;">
+    <div class="u-s3">
       <a class="btn btn--outline" href="tel:+447547741618">Ask about what you need</a>
     </div>
   </div>
@@ -336,7 +341,7 @@
     </div>
   </div>
   <div class="wrap map-contact reveal">
-    <div class="map-facade" id="mapFacade" style="min-height:260px">
+    <div class="map-facade u-s1" id="mapFacade">
       <div class="map-facade__panel" id="mapPanel">
         <strong>Bright Products</strong>
         <span>Northfield Shopping Centre, Birmingham</span>
@@ -344,7 +349,7 @@
       </div>
       <a class="map-facade__dir" href="https://www.google.com/maps/search/?api=1&amp;query=Bright+Products+Northfield+Shopping+Centre+Birmingham">Get directions</a>
     </div>
-    <div class="grid" style="grid-template-columns:1fr;">
+    <div class="grid u-s2">
       <div class="card"><h3>🕒 Opening Hours</h3><!-- PLACEHOLDER: real opening hours needed --><p>Mon–Sat: 9am – 5:30pm<br>Sun: 10am – 4pm</p><!-- /PLACEHOLDER --></div>
       <div class="card"><h3>📍 Location</h3><p>Northfield Shopping Centre<br>Birmingham</p><!-- PLACEHOLDER: unit number needed --><p class="visit-note">Find us on the ground-floor walkway, just inside the main entrance.</p><!-- /PLACEHOLDER --></div>
       <div class="card"><h3>Parking &amp; access</h3><!-- PLACEHOLDER: centre parking, accessible entrances and step-free shop access; confirm with owner --><p>Customer parking is on site at the centre, and the shop is reachable step-free from the main entrance.</p><!-- /PLACEHOLDER --></div>
